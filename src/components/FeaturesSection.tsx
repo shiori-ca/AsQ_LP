@@ -163,13 +163,9 @@ export function FeaturesSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h2 
-            className="text-4xl font-bold text-black mb-8"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
+          <h2 className="text-4xl font-bold text-black mb-8">
             AsQの機能
-          </motion.h2>
+          </h2>
           
           {/* Problem statement */}
           <motion.div 
@@ -179,12 +175,9 @@ export function FeaturesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             whileHover={{ scale: 1.02, y: -5 }}
           >
-            <motion.h3 
-              className="text-2xl font-bold text-black mb-6"
-              whileHover={{ scale: 1.05 }}
-            >
+            <h3 className="text-2xl font-bold text-black mb-6">
               こんな疑問を解決できます
-            </motion.h3>
+            </h3>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               {[
                 "お出かけ先の混雑状況やリアルタイムな現地情報を知りたい",
@@ -263,19 +256,13 @@ export function FeaturesSection() {
                           >
                             <Icon className="text-white w-7 h-7" />
                           </motion.div>
-                          <motion.span 
-                            className="text-sm font-bold text-gray-500"
-                            whileHover={{ scale: 1.1 }}
-                          >
+                          <span className="text-sm font-bold text-gray-500">
                             STEP {step.number}
-                          </motion.span>
+                          </span>
                         </div>
-                        <motion.h4 
-                          className="text-xl font-bold text-black mb-3"
-                          whileHover={{ scale: 1.05 }}
-                        >
+                        <h4 className="text-xl font-bold text-black mb-3">
                           {step.title}
-                        </motion.h4>
+                        </h4>
                         <p className="text-gray-600 leading-relaxed">{step.description}</p>
                       </motion.div>
                     </div>
@@ -317,36 +304,44 @@ export function FeaturesSection() {
         {/* Notes */}
         <div className="space-y-6">
           <motion.div 
-            className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
+            className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 2.5 }}
             whileHover={{ scale: 1.02, y: -3 }}
           >
-            <motion.h4 
-              className="font-bold text-black mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              💡 ご利用上の注意
-            </motion.h4>
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor">
+                  <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.5V11.5C15.4,11.5 16,12.1 16,12.7V16.2C16,16.8 15.4,17.3 14.8,17.3H9.2C8.6,17.3 8,16.8 8,16.2V12.7C8,12.1 8.6,11.5 9.2,11.5V10.5C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10.5V11.5H13.5V10.5C13.5,8.7 12.8,8.2 12,8.2Z"/>
+                </svg>
+              </div>
+              <h4 className="font-bold text-black text-lg">
+                ご利用上の注意
+              </h4>
+            </div>
             <p className="text-gray-700">
               投稿された質問と回答は、ブロック関係にないすべてのユーザーが閲覧できます。個人情報やプライベートな内容の投稿はお避けください。
             </p>
           </motion.div>
           
           <motion.div 
-            className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
+            className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 2.7 }}
             whileHover={{ scale: 1.02, y: -3 }}
           >
-            <motion.h4 
-              className="font-bold text-black mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              🚀 開発中の新機能
-            </motion.h4>
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="currentColor">
+                  <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,6V14L18.5,18.2L19.5,16.5L13,12.9V6H11Z"/>
+                </svg>
+              </div>
+              <h4 className="font-bold text-black text-lg">
+                開発中の新機能
+              </h4>
+            </div>
             <p className="text-gray-700">
               回答者が回答に対して報酬を受け取れる機能を現在開発中です。より質の高い回答を提供するインセンティブ制度をご期待ください。
             </p>
