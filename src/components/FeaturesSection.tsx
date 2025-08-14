@@ -163,13 +163,9 @@ export function FeaturesSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h2 
-            className="text-4xl font-bold text-black mb-8"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
+          <h2 className="text-4xl font-bold text-black mb-8">
             AsQの機能
-          </motion.h2>
+          </h2>
           
           {/* Problem statement */}
           <motion.div 
@@ -179,12 +175,9 @@ export function FeaturesSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             whileHover={{ scale: 1.02, y: -5 }}
           >
-            <motion.h3 
-              className="text-2xl font-bold text-black mb-6"
-              whileHover={{ scale: 1.05 }}
-            >
+            <h3 className="text-2xl font-bold text-black mb-6">
               こんな疑問を解決できます
-            </motion.h3>
+            </h3>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               {[
                 "お出かけ先の混雑状況やリアルタイムな現地情報を知りたい",
@@ -263,19 +256,13 @@ export function FeaturesSection() {
                           >
                             <Icon className="text-white w-7 h-7" />
                           </motion.div>
-                          <motion.span 
-                            className="text-sm font-bold text-gray-500"
-                            whileHover={{ scale: 1.1 }}
-                          >
+                          <span className="text-sm font-bold text-gray-500">
                             STEP {step.number}
-                          </motion.span>
+                          </span>
                         </div>
-                        <motion.h4 
-                          className="text-xl font-bold text-black mb-3"
-                          whileHover={{ scale: 1.05 }}
-                        >
+                        <h4 className="text-xl font-bold text-black mb-3">
                           {step.title}
-                        </motion.h4>
+                        </h4>
                         <p className="text-gray-600 leading-relaxed">{step.description}</p>
                       </motion.div>
                     </div>
@@ -323,12 +310,9 @@ export function FeaturesSection() {
             transition={{ duration: 0.8, delay: 2.5 }}
             whileHover={{ scale: 1.02, y: -3 }}
           >
-            <motion.h4 
-              className="font-bold text-black mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
+            <h4 className="font-bold text-black mb-2">
               💡 ご利用上の注意
-            </motion.h4>
+            </h4>
             <p className="text-gray-700">
               投稿された質問と回答は、ブロック関係にないすべてのユーザーが閲覧できます。個人情報やプライベートな内容の投稿はお避けください。
             </p>
@@ -341,12 +325,9 @@ export function FeaturesSection() {
             transition={{ duration: 0.8, delay: 2.7 }}
             whileHover={{ scale: 1.02, y: -3 }}
           >
-            <motion.h4 
-              className="font-bold text-black mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
+            <h4 className="font-bold text-black mb-2">
               🚀 開発中の新機能
-            </motion.h4>
+            </h4>
             <p className="text-gray-700">
               回答者が回答に対して報酬を受け取れる機能を現在開発中です。より質の高い回答を提供するインセンティブ制度をご期待ください。
             </p>
