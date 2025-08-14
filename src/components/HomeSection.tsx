@@ -36,7 +36,7 @@ export function HomeSection() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
 						>
-							<Image src={asqLogo} alt="AsQ Logo" width={100} height={100} className="object-contain" />
+							<Image src={asqLogo} alt="AsQ Logo" width={100} height={100} className="object-contain" priority />
 							<h1 className="text-5xl font-bold text-black">
 								AsQ
 							</h1>
@@ -60,7 +60,7 @@ export function HomeSection() {
 
 						{/* App Store Button */}
 						<motion.div
-							className="mb-8"
+							className="mb-8 flex justify-center lg:justify-start"
 							initial={{ opacity: 0, y: 30 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.8 }}

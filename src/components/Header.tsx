@@ -27,7 +27,14 @@ export function Header() {
 
 	const scrollToSection = (sectionId: string) => {
 		const element = document.getElementById(sectionId);
-		element?.scrollIntoView({ behavior: "smooth" });
+		if (element) {
+			const headerHeight = 64; // h-16 = 64px
+			const elementPosition = element.offsetTop - headerHeight;
+			window.scrollTo({
+				top: elementPosition,
+				behavior: "smooth",
+			});
+		}
 		setIsMenuOpen(false);
 	};
 
@@ -44,7 +51,7 @@ export function Header() {
 				<div className="flex justify-between items-center h-16">
 					{/* Logo */}
 					<motion.div className="flex items-center" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-						<Image src={asqLogo} alt="AsQ Logo" width={50} height={50} className="object-contain" />
+						<Image src={asqLogo} alt="AsQ Logo" width={50} height={50} className="object-contain" priority />
 						<span className="text-xl font-bold text-black">AsQ</span>
 					</motion.div>
 
@@ -101,7 +108,8 @@ export function Header() {
 						opacity: isMenuOpen ? 1 : 0,
 					}}
 					transition={{ duration: 0.3 }}
-					className="md:hidden overflow-hidden border-t border-gray-200 bg-white"
+					className="md:hidden border-t border-gray-200 bg-white"
+					style={{ overflow: "hidden" }}
 				>
 					<nav className="flex flex-col space-y-2 py-4">
 						<motion.button
@@ -113,8 +121,12 @@ export function Header() {
 							ホーム
 						</motion.button>
 						<motion.button
-							onClick={() => scrollToSection("features")}
-							className="text-left text-gray-700 hover:text-black hover:bg-gray-50 transition-colors px-4 py-2 rounded-lg"
+							onClick={(e) => {
+								e.preventDefault();
+								e.stopPropagation();
+								scrollToSection("features");
+							}}
+							className="text-left text-gray-700 hover:text-black hover:bg-gray-50 transition-colors px-4 py-2 rounded-lg cursor-pointer"
 							whileHover={{ x: 5 }}
 							transition={{ duration: 0.2 }}
 						>
