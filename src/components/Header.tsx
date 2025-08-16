@@ -51,7 +51,7 @@ export function Header() {
 				<div className="flex justify-between items-center h-16">
 					{/* Logo */}
 					<motion.div className="flex items-center" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-						<Image src={asqLogo} alt="AsQ Logo" width={50} height={50} className="object-contain" priority />
+						<Image src={asqLogo} alt="AsQ - リアルタイム質問アプリのロゴ" width={50} height={50} className="object-contain" priority />
 						<span className="text-xl font-bold text-black">AsQ</span>
 					</motion.div>
 

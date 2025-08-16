@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://asq-app.com/sitemap.xml
+
+# Common search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block access to admin areas (if any in the future)
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+
+# Allow access to static assets
+User-agent: *
+Allow: /images/
+Allow: /icons/
+Allow: /_next/static/
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
