@@ -1,7 +1,5 @@
 import { motion } from "motion/react";
 import { PhoneFrame } from "./PhoneFrame";
-import { Button } from "./ui/button";
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import asqLogo from "../assets/images/asq-logo.png";
 
@@ -36,7 +34,7 @@ export function HomeSection() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
 						>
-							<Image src={asqLogo} alt="AsQ Logo" width={100} height={100} className="object-contain" priority />
+							<Image src={asqLogo} alt="AsQ - リアルタイム質問アプリのロゴ" width={100} height={100} className="object-contain" priority />
 							<h1 className="text-5xl font-bold text-black">
 								AsQ
 							</h1>
