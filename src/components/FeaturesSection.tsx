@@ -15,7 +15,7 @@ const steps = [
     title: '回答者を検索',
     description: 'あなたの質問内容にマッチする回答者を検索できます。現在質問を受付中の回答者のみが表示されるため、確実に返答を得ることができます。',
     icon: SearchPersonIcon,
-    gradient: 'from-gray-700 to-gray-900',
+    gradientClass: 'bg-gradient-to-br from-gray-700 to-gray-900',
     screenTitle: '検索画面',
     screenDescription: '回答者一覧'
   },
@@ -24,7 +24,7 @@ const steps = [
     title: 'プロフィール確認',
     description: '回答者のプロフィール情報、過去の回答履歴、他のユーザーからの評価を確認。信頼できる回答者を見つけたら「質問する」ボタンをタップしましょう。',
     icon: ProfileCheckIcon,
-    gradient: 'from-gray-600 to-gray-800',
+    gradientClass: 'bg-gradient-to-br from-gray-600 to-gray-800',
     screenTitle: 'プロフィール画面',
     screenDescription: '回答者詳細'
   },
@@ -33,7 +33,7 @@ const steps = [
     title: '質問を送信',
     description: '質問内容と回答期限を設定して送信。万が一回答者に断られても大丈夫！自動で類似の回答者を最大3回まで探してマッチングします。',
     icon: MessageTimeIcon,
-    gradient: 'from-gray-800 to-black',
+    gradientClass: 'bg-gradient-to-br from-gray-800 to-black',
     screenTitle: '質問作成画面',
     screenDescription: '質問入力フォーム'
   },
@@ -42,7 +42,7 @@ const steps = [
     title: '回答者に通知',
     description: '回答者にあなたの質問が通知されます。回答者は質問内容と期限を確認した上で、受諾するかどうかを判断します。（回答者は最大5件まで質問を受け持てます）',
     icon: NotificationArrowIcon,
-    gradient: 'from-gray-700 to-gray-900',
+    gradientClass: 'bg-gradient-to-br from-gray-700 to-gray-900',
     screenTitle: '通知画面',
     screenDescription: '新着通知'
   },
@@ -51,7 +51,7 @@ const steps = [
     title: '回答を受信',
     description: '回答者があなたの質問に対して丁寧に回答し、返信をお送りします。リアルタイムで現地の生の情報を受け取ることができます。',
     icon: AnswerPenIcon,
-    gradient: 'from-gray-600 to-gray-800',
+    gradientClass: 'bg-gradient-to-br from-gray-600 to-gray-800',
     screenTitle: '回答画面',
     screenDescription: '回答メッセージ'
   },
@@ -60,7 +60,7 @@ const steps = [
     title: '回答を評価',
     description: '受け取った回答の品質を5段階で評価。満足のいく回答には高評価をつけて、回答者のモチベーション向上にご協力ください。',
     icon: RatingThumbIcon,
-    gradient: 'from-gray-800 to-black',
+    gradientClass: 'bg-gradient-to-br from-gray-800 to-black',
     screenTitle: '評価画面',
     screenDescription: '星評価システム'
   }
@@ -101,7 +101,7 @@ function StepPhoneFrame({ step, className = "" }: { step: typeof steps[0], class
           <div className="w-full h-full bg-gray-50 flex flex-col items-center justify-center relative overflow-hidden p-4">
             {/* Step icon */}
             <motion.div 
-              className={`w-12 h-12 bg-gradient-to-br ${step.gradient} rounded-xl flex items-center justify-center mb-4 shadow-md`}
+              className={`w-12 h-12 ${step.gradientClass} rounded-xl flex items-center justify-center mb-4 shadow-md`}
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             >
@@ -246,7 +246,7 @@ export function FeaturesSection() {
                       >
                         <div className="flex items-center justify-center lg:justify-start mb-4">
                           <motion.div 
-                            className={`w-14 h-14 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center mr-3 shadow-lg`}
+                            className={`w-14 h-14 ${step.gradientClass} rounded-2xl flex items-center justify-center mr-3 shadow-lg`}
                             whileHover={{ 
                               scale: 1.15, 
                               rotate: [0, -5, 5, 0],

@@ -7,15 +7,8 @@ import asqLogo from "../assets/images/asq-logo.png";
 export function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
-	const [isClient, setIsClient] = useState(false);
 
 	useEffect(() => {
-		setIsClient(true);
-	}, []);
-
-	useEffect(() => {
-		if (!isClient) return;
-
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 10);
 		};
@@ -23,7 +16,7 @@ export function Header() {
 		handleScroll();
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, [isClient]);
+	}, []);
 
 	const scrollToSection = (sectionId: string) => {
 		const element = document.getElementById(sectionId);
